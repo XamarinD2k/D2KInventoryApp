@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+     x:Class="Inventory.LogIn"
+     xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+ 	 xmlns:local="clr-namespace:Inventory;assembly=Inventory" >
+
+
+	<ContentPage.BindingContext>
+		<local:VMLogin/>
+	</ContentPage.BindingContext>
+<!--	<ContentPage.Content>-->
+<!--	<ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#FFF" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="BackgroundColor" Value="#00FFFF"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="Impact, Charcoal, sans-serif" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#FFF" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="BackgroundColor" Value="#00FFFF" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="FontFamily" Value="Impact, Charcoal, sans-serif" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#FFF" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="BackgroundColor" Value="E0E0E0" />
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>-->
+    <ContentPage.Content>
+	<StackLayout VerticalOptions="Center" Orientation="Vertical">
+		<Label Text="LOG IN" BackgroundColor="Aqua" FontSize="30" TextColor="White" />
+
+	<StackLayout VerticalOptions="Center" Orientation="Vertical">
+<!--<Image Source="d2kt.png" WidthRequest="200" HeightRequest="100"></Image>-->
+      		</StackLayout>
+      	<StackLayout>
+
+      	</StackLayout >
+     		<StackLayout></StackLayout>
+			<StackLayout  Orientation="Horizontal"    HorizontalOptions="FillAndExpand">
+      			<Image Source="user.png" WidthRequest="52" HeightRequest="40"></Image>
+     			<Entry x:Name="txtUserName" Keyboard="Text" Placeholder="User Id" HorizontalOptions="FillAndExpand"
+     			Text="{Binding PUserID}" TextColor="White" />
+     		</StackLayout>
+     		<StackLayout>
+     		</StackLayout>
+
+     		<StackLayout></StackLayout>
+     		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+     			<Image Source="passw.png" WidthRequest="52" HeightRequest="40"></Image>
+     			<Entry x:Name="txtPassword" Placeholder="Password" HorizontalOptions="FillAndExpand" 
+     			IsEnabled="{Binding IsPassordEnalble}" Text="{Binding PPassord}" TextColor="White" IsPassword="{Binding PIsPassword}" ></Entry>
+     		
+     		</StackLayout>
+     	    <StackLayout></StackLayout>
+	     		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+	     		<controls:CheckBox  x:Name="check" Checked="{Binding PShowPassword}" IsEnabled="{Binding IsPassordEnalble }"/>
+	     		<Label  Text="Show Password" HorizontalOptions="StartAndExpand" FontSize="18" TextColor="White"/>
+
+            <Label x:Name="forgetPasswordLabel" Text="Forgot Password?" FontSize="18" TextColor="White" />
+<!--            	 <Label.GestureRecognizer >
+            		<TapGestureRecognizer Command="{Binding ForgetTapped}"></TapGestureRecognizer>
+            	</Label.GestureRecognizer>
+            </Label>-->
+	     		</StackLayout>
+     		<StackLayout></StackLayout>
+     		<StackLayout></StackLayout>
+
+     		<StackLayout Padding="20">
+	     		<Button x:Name="btnLogin" HorizontalOptions="FillAndExpand" 
+	     		 Text="Sign In" BackgroundColor="Aqua" IsEnabled="{Binding IsLoginEnalble}" Clicked="OnSubmit" />
+	     		<StackLayout></StackLayout>
+
+
+     		</StackLayout>
+
+
+     	</StackLayout>
+
+			
+	</ContentPage.Content>
+</ContentPage>
