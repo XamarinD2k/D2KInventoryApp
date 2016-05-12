@@ -77,7 +77,7 @@
 
      		<StackLayout Padding="20">
 	     		<Button x:Name="btnLogin" HorizontalOptions="FillAndExpand" 
-	     		 Text="Sign In" BackgroundColor="Aqua" IsEnabled="{Binding IsLoginEnalble}" Clicked="OnSubmit" />
+	     		 Text="Sign In" BackgroundColor="Aqua" IsEnabled="{Binding IsLoginEnalble}"/>
 	     		<StackLayout></StackLayout>
 
 
