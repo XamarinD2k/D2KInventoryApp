@@ -3,7 +3,8 @@
      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
      x:Class="Inventory.LogIn"
      xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
- 	 xmlns:local="clr-namespace:Inventory;assembly=Inventory" >
+ 	 xmlns:local="clr-namespace:Inventory;assembly=Inventory" 
+ 	 Title="LogIn">
 
 
 	<ContentPage.BindingContext>
